@@ -37,6 +37,7 @@ a.anchor {
   border: none; box-shadow: none;
   background: transparent;
   height:70px;
+  transition: background 1s;
 }
 .navbar .navbar-brand {
   font-size: 28px; font-weight: bold;
@@ -54,21 +55,26 @@ a.anchor {
   color: white; font-size:18px;
   display: inline-block;
   padding: 7px;
-  background: #555;
+  background-color: #555;
   border-radius: 20px;
+  text-decoration: none!important;
+  transition: background-color 1s;
 }
-.navbar-text .navbar-link:hover {background:#3399ff; text-decoration: none;}
+.navbar-text .navbar-link:hover {background-color:#3399ff;}
 
 /* Background images for sections */
 .bg {
   background:fixed;background-position:bottom;background-size:cover;
   background-image:url('bg.jpg');
   display: block;
-  height:70vh;padding:1px 0px;
+  height:40vh;padding:1px 0px;
 }
+.bg:first-of-type {height:70vh;}
+
 .bg>h2 {
-  text-shadow:0 0 10px black, 0 0 2px black;color:#FFF;
-  font-size:70px;margin-top:26vh;text-align:center;
+  color:#FFF;
+  text-shadow:0 0 10px black, 0 0 2px black;
+  font-size:70px;margin-top:15vh;text-align:center;
 }
 
 /* main photo */
