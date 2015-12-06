@@ -48,7 +48,7 @@ a.anchor {
 .navbar .nav-pills a {color: white; font-weight: bold; padding: 5px 10px}
 .navbar .nav-pills li:hover a {background: none; text-decoration: underline;}
 .navbar .nav-pills li.active a {background: white;color: black; text-decoration: none;}
-.mod-nav {background:#222;}
+.mod-nav {background:#333;}
 
 .navbar-text {margin-top: 14px;}
 .navbar-text .navbar-link {
@@ -62,20 +62,17 @@ a.anchor {
 }
 .navbar-text .navbar-link:hover {background-color:#3399ff;}
 
-/* Background images for sections */
+/* Background images for sections 
+  Modified from work.debayangupta;
+  clean up and fix after design is finalised
+*/
 .bg {
-  background:fixed;background-position:bottom;background-size:cover;
-  background-image:url('bg.jpg');
+  min-height: 100vh;
+  height: auto;
   display: block;
-  height:40vh;padding:1px 0px;
+  padding:1px 0px;
 }
-.bg:first-of-type {height:70vh;}
-
-.bg>h2 {
-  color:#FFF;
-  text-shadow:0 0 10px black, 0 0 2px black;
-  font-size:70px;margin-top:15vh;text-align:center;
-}
+.bg>h2 {font-size:70px;margin-top:15vh;text-align:center;}
 
 /* main photo */
 #pic {
@@ -84,6 +81,17 @@ a.anchor {
   margin: 0 30px 0 0;
 }
 #pic img {height: 200px}
+
+/* sections */
+#index {
+  background-attachment:fixed;background-position:bottom;background-size:cover;
+  display: block; height:70vh; padding:1px 0px;
+  background-image:url('bg.jpg');
+}
+#research     {background:#BBB; color: #444;} #research h2     {color: #444}
+#publications {background:#555; color: #AAA;} #publications h2 {color: #AAA}
+#personal     {background:#111; color: #555;} #personal h2     {color: #555}
+
 
   </style>
   <script type="text/javascript">
@@ -106,6 +114,7 @@ $(function() {
   $(document).trigger('scroll'); // in case someone opens a # directly
 
 });
+
   </script>
 </head> 
 
@@ -131,7 +140,7 @@ $(function() {
 </nav>
 
 <!-- Page index -->
-<div id="index" class="bg"><a class="anchor" id="_index"></a><h2></h2></div>
+<div id="index"><a class="anchor" id="_index"></a><h2></h2></div>
 <section class="container">
 
 <figure id="pic"><img alt="Akshay Deshmukh" src="akshaydeshmukh.jpg" class="img-circle"></figure>
@@ -146,7 +155,7 @@ $(function() {
 </section>
 
 <!-- Research -->
-<div id="research" class="bg"><a class="anchor" id="_research"></a><h2>Research</h2></div>
+<div id="research" class="bg"><a class="anchor" id="_research"></a><h2>Research</h2>
 <section class="container">
 <p>Research</p>
 
@@ -155,10 +164,11 @@ $(function() {
 <p>Curabitur sed blandit elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vitae tincidunt leo, eget malesuada nisl. Aenean nec eros quis nulla tristique viverra nec imperdiet tellus. Nulla venenatis pellentesque odio et ornare. Donec in lacinia arcu, nec tempor sem. Mauris malesuada, mi in pulvinar auctor, nibh felis suscipit massa, eget vehicula urna ligula in ex. Quisque dui diam, scelerisque sit amet ligula et, malesuada venenatis nulla. Aenean ultrices tellus est, in tincidunt urna mollis in. Sed lorem nunc, sodales eget consequat vitae, condimentum et leo. Pellentesque tempor eget nulla at bibendum. Nulla ultricies, orci vitae rhoncus hendrerit, nisi ante pulvinar est, ac aliquet lectus lorem et ipsum.</p>
 
 </section>
+</div>
 
 
 <!-- Publications -->
-<div id="publications" class="bg"><a class="anchor" id="_publications"></a><h2>Publications</h2></div>
+<div id="publications" class="bg"><a class="anchor" id="_publications"></a><h2>Publications</h2>
 <section class="container">
 <p>Publications</p>
 
@@ -167,9 +177,11 @@ $(function() {
 <p>Curabitur sed blandit elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vitae tincidunt leo, eget malesuada nisl. Aenean nec eros quis nulla tristique viverra nec imperdiet tellus. Nulla venenatis pellentesque odio et ornare. Donec in lacinia arcu, nec tempor sem. Mauris malesuada, mi in pulvinar auctor, nibh felis suscipit massa, eget vehicula urna ligula in ex. Quisque dui diam, scelerisque sit amet ligula et, malesuada venenatis nulla. Aenean ultrices tellus est, in tincidunt urna mollis in. Sed lorem nunc, sodales eget consequat vitae, condimentum et leo. Pellentesque tempor eget nulla at bibendum. Nulla ultricies, orci vitae rhoncus hendrerit, nisi ante pulvinar est, ac aliquet lectus lorem et ipsum.</p>
 
 </section>
+</div>
+
 
 <!-- Personal -->
-<div id="personal" class="bg"><a class="anchor" id="_personal"></a><h2>Personal</h2></div>
+<div id="personal" class="bg"><a class="anchor" id="_personal"></a><h2>Personal</h2>
 <section class="container">
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vulputate neque eget massa aliquet mollis. Fusce facilisis dolor nec imperdiet elementum. Aliquam erat volutpat. Etiam viverra hendrerit elit, ultrices scelerisque quam. Nulla facilisi. In hac habitasse platea dictumst. Nulla tristique velit ac leo tristique rutrum. Praesent sagittis porta ante, at volutpat nisl facilisis ac. Integer ut posuere ligula, in volutpat ante. Donec eget sollicitudin dui. Proin velit eros, rutrum ac placerat ac, porta molestie nunc. Proin tortor justo, imperdiet at ornare at, lobortis et enim. Nam vitae hendrerit nulla. Quisque eget nisl porttitor, gravida massa ut, euismod quam. Etiam at justo pharetra, vulputate erat at, ultrices nisi.</p>
@@ -177,6 +189,9 @@ $(function() {
 <p>Curabitur sed blandit elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vitae tincidunt leo, eget malesuada nisl. Aenean nec eros quis nulla tristique viverra nec imperdiet tellus. Nulla venenatis pellentesque odio et ornare. Donec in lacinia arcu, nec tempor sem. Mauris malesuada, mi in pulvinar auctor, nibh felis suscipit massa, eget vehicula urna ligula in ex. Quisque dui diam, scelerisque sit amet ligula et, malesuada venenatis nulla. Aenean ultrices tellus est, in tincidunt urna mollis in. Sed lorem nunc, sodales eget consequat vitae, condimentum et leo. Pellentesque tempor eget nulla at bibendum. Nulla ultricies, orci vitae rhoncus hendrerit, nisi ante pulvinar est, ac aliquet lectus lorem et ipsum.</p>
 
 </section>
+</div>
+
+
 
 </body> 
  
