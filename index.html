@@ -103,6 +103,8 @@ section {padding: 50px 0px}
   </style>
   <script type="text/javascript">
 $(function() {
+
+  // animate clicked intra-page navigation
   $("#navnav a[href^='#']").on('click', function(e) {
     e.preventDefault();
     var hash = this.hash;
@@ -111,6 +113,7 @@ $(function() {
     });
   });
 
+  // navbar background after scroling past top
   $(document).scroll(function(){
     if ($(this).scrollTop() > 200) {
         $('.navbar').addClass("mod-nav");
@@ -120,8 +123,11 @@ $(function() {
   });
   $(document).trigger('scroll'); // in case someone opens a # directly
 
+  // set height of top background
+  // could play with css flex, align-items, etc., but this seems safer
   $("#top-area").height($(window).height() - $("#index section").outerHeight());
 
+  // scroll directly to sections
   $.scrollify({ section : ".bg" });
 });
 
